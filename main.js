@@ -76,7 +76,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const board = document.querySelector(".board");
   createBoard(board);
   // Open the WebSocket connection and register event handlers.
-  const websocket = new WebSocket("ws://testpcconnect.azurewebsites.net:8001/");
+  const websocket = new WebSocket("ws://testpcconnect.azurewebsites.net");
   initGame(websocket);
   receiveMoves(board, websocket);
   sendMoves(board, websocket);

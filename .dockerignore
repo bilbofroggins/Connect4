@@ -1,0 +1,11 @@
+**/.git
+**/.gitignore
+**/.vscode
+**/coverage
+**/.ssh
+README.md
+docker-compose.yml
+**/.DS_Store
+**/venv
+**/.venv
+**/__pycache__
