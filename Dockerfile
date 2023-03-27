@@ -1,11 +1,8 @@
 FROM python:latest
-
-WORKDIR /
-
-COPY poetry.lock poetry.lock
+RUN mkdir /app
+ADD . /app
+WORKDIR /app
 RUN pip3 install poetry
 RUN poetry install
-
-COPY . .
-
-CMD [ "python3", "-m" , "http.server", "80"]
+ENTRYPOINT ["poetry", "run"]
+CMD ["python", "run.py"]
