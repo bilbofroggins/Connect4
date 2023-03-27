@@ -4,5 +4,4 @@ ADD . /app
 WORKDIR /app
 RUN pip3 install poetry
 RUN poetry install
-ENTRYPOINT ["poetry", "run"]
-CMD ["python", "run.py"]
+CMD ["poetry", "run", "python3", "app.py"]
